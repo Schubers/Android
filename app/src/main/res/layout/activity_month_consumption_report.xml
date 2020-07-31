@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/consumption_whole_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김재훈님의\n이번 달 정기 지출은\n328,950원 입니다."
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:layout_margin="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.timqi.sectorprogressview.ColorfulRingProgressView
+                android:id="@+id/consumption_whole_value_chart"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="60dp"
+                app:strokeWidth="45dp"
+                app:bgColor="@color/colorWhite"
+                app:fgColorStart="@color/colorMain"
+                app:fgColorEnd="@color/colorMain"
+                app:percent="60"
+                app:layout_constraintTop_toBottomOf="@id/consumption_whole_value_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/consumption_whole_value_chart_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="의류 / 식료품 구독\n246,000원"
+                android:textColor="@color/black_900"
+                android:textSize="18sp"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/consumption_whole_value_chart"
+                app:layout_constraintBottom_toBottomOf="@id/consumption_whole_value_chart"
+                app:layout_constraintStart_toStartOf="@id/consumption_whole_value_chart"
+                app:layout_constraintEnd_toEndOf="@id/consumption_whole_value_chart" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/consumption_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제금액이\n지난 달 대비\n72% 증가했어요!"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:layout_marginTop="80dp"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/consumption_whole_value_chart"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.hadiidbouk.charts.ChartProgressBar
+                android:id="@+id/consumption_value_graph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                app:hdBarCanBeClick="true"
+                app:hdBarHeight="170dp"
+                app:hdBarWidth="40dp"
+                app:hdBarRadius="6dp"
+                app:hdEmptyColor="@color/colorWhite"
+                app:hdProgressColor="@color/color_graph_gray"
+                app:hdProgressClickColor="@color/colorMain"
+                app:hdPinBackgroundColor="@color/pin_background"
+                app:hdPinTextColor="@color/black_900"
+                app:hdPinPaddingBottom="5dp"
+                app:hdBarTitleColor="@color/bar_title_color"
+                app:hdBarTitleTxtSize="12sp"
+                app:hdPinTxtSize="12sp"
+                app:hdPinMarginTop="10dp"
+                app:hdPinMarginBottom="55dp"
+                app:hdPinMarginEnd="22dp"
+                app:hdBarTitleMarginTop="9dp"
+                app:hdPinDrawable="@drawable/ic_pin"
+                app:hdProgressDisableColor="@color/progress_disable"
+                app:hdBarTitleSelectedColor="#FFFFFF"
+                android:layout_marginTop="60dp"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/consumption_value_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/consumption_value_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(단위:원)"
+                android:textSize="9sp"
+                android:textColor="@color/black_900"
+                android:fontFamily="@font/nanumsquareregular"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="@id/consumption_value_graph"
+                app:layout_constraintTop_toBottomOf="@id/consumption_value_graph"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:layout_marginTop="80dp"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/consumption_value_graph"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ratio_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black_900"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:text="비율"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toBottomOf="@id/list_tv"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/service_name_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black_900"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:text="서비스 이름"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toBottomOf="@id/list_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black_900"
+                android:fontFamily="@font/nanumsquareextrabold"
+                android:text="금액"
+                android:layout_marginEnd="36dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toBottomOf="@id/list_tv"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toBottomOf="@id/service_name_title_tv"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorMain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

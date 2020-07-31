@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginVertical="14dp"
+    android:layout_marginHorizontal="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/subscribe_background_v"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/half_gl"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/half_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/subscribe_imv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/half_gl"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_kinds_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquareregular"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/subscribe_imv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/subscribe_name_tv"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquareextrabold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/subscribe_imv"
+            app:layout_constraintTop_toBottomOf="@id/subscribe_kinds_tv"
+            app:layout_constraintBottom_toBottomOf="@id/half_gl"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquarebold"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/subscribe_name_tv"
+            app:layout_constraintBottom_toBottomOf="@id/subscribe_name_tv"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_payment_date_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_900"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquarebold"
+            android:text="이번 달 결제일"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/half_gl"
+            app:layout_constraintBottom_toTopOf="@id/subscribe_whole_payment_date_title_tv"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_payment_date_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_900"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquarebold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/half_gl"
+            app:layout_constraintBottom_toTopOf="@id/subscribe_whole_payment_date_content_tv"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_whole_payment_date_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_900"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquarebold"
+            android:text="누적 결제 기간"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/subscribe_payment_date_title_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_whole_payment_date_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_900"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquarebold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/subscribe_payment_date_content_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
